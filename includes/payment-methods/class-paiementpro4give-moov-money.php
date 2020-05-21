@@ -14,7 +14,6 @@ class PaiementPro4Give_Moov_Money {
 	public function __construct() {
 		add_action( 'give_gateway_paiementpro_moov_money', [ $this, 'process_donation' ] );
 		add_action( 'give_paiementpro_moov_money_cc_form', '__return_false' );
-		add_action( 'init', [ $this, 'verify_payment' ] );
 	}
 
 	public function process_donation( $data ) {
@@ -121,45 +120,6 @@ class PaiementPro4Give_Moov_Money {
 			give_die();
 		}
 	}
-
-	/**
-	 * This function will validate payment on donation receipt page.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return void
-	 */
-	public function verify_payment() {
-
-		$getData       = give_clean( $_GET );
-		$donationId    = ! empty( $getData['order_id'] ) ? $getData['order_id'] : false;
-		$transactionId = ! empty( $getData['pp_status'] ) ? $getData['pp_status'] : '';
-
-		// Bailout, if donation id not received from paiementpro gateway.
-		if ( ! $donationId ) {
-			return;
-		}
-
-		$donation_gateway = give_get_payment_gateway( $donationId );
-
-		// Bailout, if not `moov_money` payment Gateway
-		if ( 'paiementpro_moov_money' !== $donation_gateway ) {
-			return;
-		}
-
-		$credentialId = paiementpro4give_get_credential_id();
-		$merchantId   = paiementpro4give_get_merchant_id();
-		$errorStatus  = sha1("{$donationId}error{$merchantId}{$credentialId}" );
-		$successStatus = sha1("{$donationId}success{$merchantId}{$credentialId}" );
-
-		// Success, if transaction id exists, else failed.
-		if ( ! empty( $transactionId ) && $transactionId === $successStatus ) {
-			give_update_payment_status( $donationId, 'publish' );
-		} elseif ( ! empty( $transactionId ) && $transactionId === $errorStatus ) {
-			give_update_payment_status( $donationId, 'failed' );
-		}
-	}
-
 }
 
 new PaiementPro4Give_Moov_Money();
