@@ -171,7 +171,6 @@ if ( ! class_exists( 'PaiementPro4Give' ) ) {
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-mtn-money.php';
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-moov-money.php';
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-orange-money.php';
-			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-card.php';
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/filters.php';
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/actions.php';
 
