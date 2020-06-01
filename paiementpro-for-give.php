@@ -2,7 +2,9 @@
 /**
  * Plugin Name:       PaiementPro for Give
  * Version:           1.0.0
- * Author:            Mehul Gohil, AmiraGlobal
+ * Author:            PaiementPro
+ * Author URI:        https://paiementpro.net
+ * Plugin URI:        https://wordpress.org/plugins/paiementpro-for-give/
  * Description:       Accept donations for GiveWP using PaiementPro payment gateway.
  * Requires at least: 4.8
  * Requires PHP:      5.6
