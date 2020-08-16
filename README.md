@@ -6,7 +6,7 @@
 
 👉 Not a developer? Running WordPress? [Download PaimentPro for Give](https://wordpress.org/plugins/paiementpro-for-give/) on WordPress.org.
 
-![WordPress version](https://img.shields.io/wordpress/plugin/v/paiementpro-for-give.svg) ![WordPress Rating](https://img.shields.io/wordpress/plugin/r/paiementpro-for-give.svg) ![WordPress Downloads](https://img.shields.io/wordpress/plugin/dt/paiementpro-for-give.svg) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kohp-ministries/paiementpro-for-give/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/kohp-ministries/paiementpro-for-give/?branch=master) [![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](https://github.com/kohp-ministries/paiementpro-for-give/blob/master/license.txt) 
+![WordPress version](https://img.shields.io/wordpress/plugin/v/paiementpro-for-give.svg) ![WordPress Rating](https://img.shields.io/wordpress/plugin/r/paiementpro-for-give.svg) ![WordPress Downloads](https://img.shields.io/wordpress/plugin/dt/paiementpro-for-give.svg) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kohp-ministries/paiementpro-for-give/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kohp-ministries/paiementpro-for-give/?branch=master) [![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](https://github.com/kohp-ministries/paiementpro-for-give/blob/master/license.txt) 
 
 Welcome to the **PaiementPro for Give** GitHub repository. This is the core repository and heart of an ecosystem of active development. Here you can browse the source, look at open issues, and contribute to the project. 
 
