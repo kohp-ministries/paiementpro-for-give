@@ -83,23 +83,28 @@ add_filter( 'give_get_settings_gateways', 'paiementpro4give_register_settings' )
 /**
  * This function is used to add settings page link on plugins page.
  *
- * @param array $links List of links on plugin page.
+ * @param array $actions List of links on plugin page.
  *
  * @since  1.0.0
  * @access public
  *
  * @return array
  */
-function paiementpro4give_add_plugin_links( $links ) {
-	$links['settings'] = sprintf(
-		'<a href="%1$s">%2$s</a>',
-		esc_url_raw( admin_url( 'edit.php?post_type=give_forms&page=give-settings&tab=gateways&section=paiementpro' ) ),
-		esc_html__( 'Settings', 'give' )
-	);
+function paiementpro4give_add_plugin_links( $actions ) {
+	$new_actions = [
+		'settings' => sprintf(
+			'<a href="%1$s">%2$s</a>',
+			admin_url( 'edit.php?post_type=give_forms&page=give-settings&tab=gateways&section=paiementpro' ),
+			esc_html__( 'Settings', 'give' )
+		),
+		'support'  => sprintf(
+			'<a target="_blank" href="%1$s">%2$s</a>',
+			esc_url_raw( 'https://wordpress.org/support/plugin/paiementpro-for-give/' ),
+			esc_html__( 'Support', 'give' )
+		),
+	];
 
-	asort( $links );
-
-	return $links;
+	return array_merge( $new_actions, $actions );
 }
 
 add_filter( 'plugin_action_links_' . PAIEMENTPRO4GIVE_PLUGIN_BASENAME, 'paiementpro4give_add_plugin_links' );
