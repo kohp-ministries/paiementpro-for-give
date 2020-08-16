@@ -2,9 +2,9 @@
 Contributors: paiementpro, mehul0810
 Tags: paiementpro, givewp, give, donation, donations
 Requires at least: 4.8
-Tested up to: 5.4
+Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
