@@ -173,6 +173,7 @@ if ( ! class_exists( 'PaiementPro4Give' ) ) {
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/filters.php';
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/actions.php';
 
+			// Display admin notice when admin credentials to process payments are not set.
 			if (
 				! paiementpro4give_get_merchant_id() ||
 				! paiementpro4give_get_credential_id() ||
