@@ -60,6 +60,12 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 
 == Changelog ==
 
+= 1.0.1 - 17th August 2020 =
+* Resolve fatal error when on plugin activation when give is not active [#7](https://github.com/kohp-ministries/paiementpro-for-give/issues/7)
+* Display notification to store owner if backend credentials empty [#3](https://github.com/kohp-ministries/paiementpro-for-give/issues/3)
+* UX Improvements
+* Security Improvements
+
 = 1.0.0 - 5th June 2020 =
 * Initial Release.
 
