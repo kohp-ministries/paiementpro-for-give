@@ -172,6 +172,19 @@ if ( ! class_exists( 'PaiementPro4Give' ) ) {
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-orange-money.php';
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/filters.php';
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/actions.php';
+
+			// Display admin notice when admin credentials to process payments are not set.
+			if (
+				! paiementpro4give_get_merchant_id() ||
+				! paiementpro4give_get_credential_id() ||
+				! paiementpro4give_get_api_url()
+			) {
+				PaiementPro4Give()->add_admin_notice(
+					'empty-credentials',
+					'error',
+					__( 'Please save the <strong>Merchant ID</strong> and <strong>Credential ID</strong> to accept donations via PaiementPro.', 'give' )
+				);
+			}
 		}
 
 		/**
