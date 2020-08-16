@@ -13,6 +13,7 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
+ // Bailout, if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -37,7 +38,7 @@ if ( ! class_exists( 'PaiementPro4Give' ) ) {
 		 *
 		 * @var array
 		 */
-		public $notices = array();
+		public $notices = [];
 
 		/**
 		 * Singleton pattern.
@@ -74,14 +75,12 @@ if ( ! class_exists( 'PaiementPro4Give' ) ) {
 		 *
 		 */
 		private function setup() {
-
 			// Setup constants.
 			$this->setup_constants();
 
 			// Give init hook.
 			add_action( 'plugins_loaded', [ $this, 'init' ], 101 );
-			add_action( 'admin_init', array( $this, 'check_environment' ), 999 );
-			add_action( 'admin_notices', array( $this, 'admin_notices' ), 15 );
+			add_action( 'admin_notices', [ $this, 'admin_notices' ], 15 );
 		}
 
 		/**
@@ -93,7 +92,6 @@ if ( ! class_exists( 'PaiementPro4Give' ) ) {
 		 *
 		 */
 		public function setup_constants() {
-
 			if ( ! defined( 'PAIEMENTPRO4GIVE_VERSION' ) ) {
 				define( 'PAIEMENTPRO4GIVE_VERSION', '1.0.0' );
 			}
@@ -149,7 +147,6 @@ if ( ! class_exists( 'PaiementPro4Give' ) ) {
 				// Load the default language files.
 				load_plugin_textdomain( 'paiementpro-for-give', false, $lang_dir );
 			}
-
 		}
 
 		/**
@@ -161,8 +158,8 @@ if ( ! class_exists( 'PaiementPro4Give' ) ) {
 		 *
 		 */
 		public function init() {
-
-			if ( ! $this->get_environment_warning() ) {
+			// Bailout, if environment is not suitable for loading plugin.
+			if ( ! $this->check_environment() ) {
 				return;
 			}
 
@@ -175,8 +172,6 @@ if ( ! class_exists( 'PaiementPro4Give' ) ) {
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-orange-money.php';
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/filters.php';
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/actions.php';
-
-
 		}
 
 		/**
@@ -202,7 +197,7 @@ if ( ! class_exists( 'PaiementPro4Give' ) ) {
 
 			if ( empty( $is_give_active ) ) {
 				// Show admin notice.
-				$this->add_admin_notice( 'prompt_give_activate', 'error', sprintf( __( '<strong>Activation Error:</strong> You must have the <a href="%s" target="_blank">Give</a> plugin installed and activated for "iPay88 for Give" to activate.', 'paiementpro-for-give' ), 'https://givewp.com' ) );
+				$this->add_admin_notice( 'prompt_give_activate', 'error', sprintf( __( '<strong>Activation Error:</strong> You must have the <a href="%s" target="_blank">Give</a> plugin installed and activated for <strong>PaiementPro for Give</strong> to activate.', 'give' ), 'https://givewp.com' ) );
 				$is_working = false;
 			}
 
@@ -229,7 +224,7 @@ if ( ! class_exists( 'PaiementPro4Give' ) ) {
 
 				/* Min. Give. plugin version. */
 				// Show admin notice.
-				$this->add_admin_notice( 'prompt_give_incompatible', 'error', sprintf( __( '<strong>Activation Error:</strong> You must have the <a href="%s" target="_blank">Give</a> core version %s for the "iPay88 for Give" add-on to activate.', 'paiementpro-for-give' ), 'https://givewp.com', PAIEMENTPRO4GIVE_MIN_GIVE_VER ) );
+				$this->add_admin_notice( 'prompt_give_incompatible', 'error', sprintf( __( '<strong>Activation Error:</strong> You must have the <a href="%1$s" target="_blank">Give</a> core version %2$s for the "iPay88 for Give" add-on to activate.', 'give' ), 'https://givewp.com', PAIEMENTPRO4GIVE_MIN_GIVE_VER ) );
 
 				$is_working = false;
 			}
@@ -248,10 +243,10 @@ if ( ! class_exists( 'PaiementPro4Give' ) ) {
 		 *
 		 */
 		public function add_admin_notice( $slug, $class, $message ) {
-			$this->notices[ $slug ] = array(
+			$this->notices[ $slug ] = [
 				'class'   => $class,
 				'message' => $message,
-			);
+			];
 		}
 
 		/**
@@ -261,20 +256,20 @@ if ( ! class_exists( 'PaiementPro4Give' ) ) {
 		 */
 		public function admin_notices() {
 
-			$allowed_tags = array(
-				'a'      => array(
-					'href'  => array(),
-					'title' => array(),
-					'class' => array(),
-					'id'    => array(),
-				),
-				'br'     => array(),
-				'em'     => array(),
-				'span'   => array(
-					'class' => array(),
-				),
-				'strong' => array(),
-			);
+			$allowed_tags = [
+				'a'      => [
+					'href'  => [],
+					'title' => [],
+					'class' => [],
+					'id'    => [],
+				],
+				'br'     => [],
+				'em'     => [],
+				'span'   => [
+					'class' => [],
+				],
+				'strong' => [],
+			];
 
 			foreach ( (array) $this->notices as $notice_key => $notice ) {
 				echo "<div class='" . esc_attr( $notice['class'] ) . "'><p>";
