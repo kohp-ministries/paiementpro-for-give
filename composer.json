@@ -1,0 +1,42 @@
+{
+    "name": "kohp-ministries/paiementpro-for-give",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "description": "",
+    "homepage": "https://paiementpro.net/",
+    "require": {
+        "composer/installers": "~1.2"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+        "phpcompatibility/php-compatibility": "^9.3",
+        "phpcompatibility/phpcompatibility-wp": "*",
+        "wp-coding-standards/wpcs": "*"
+    },
+    "keywords": [
+        "wordpress",
+        "plugin",
+        "donations"
+    ],
+    "support": {
+        "issues": "https://github.com/kohp-ministries/paiementpro-for-give/issues"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs || true",
+            "@install-codestandards"
+        ],
+        "post-update-cmd": [
+            "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs || true"
+        ],
+        "install-codestandards": [
+            "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "PaiementPro\\Give\\": "src/"
+        }
+    }
+}
