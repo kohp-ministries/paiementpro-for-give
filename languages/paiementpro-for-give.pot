@@ -15,14 +15,6 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: paiementpro-for-give.php:205
-msgid "<strong>Activation Error:</strong> You must have the <a href=\"%s\" target=\"_blank\">Give</a> plugin installed and activated for \"iPay88 for Give\" to activate."
-msgstr ""
-
-#: paiementpro-for-give.php:232
-msgid "<strong>Activation Error:</strong> You must have the <a href=\"%s\" target=\"_blank\">Give</a> core version %s for the \"iPay88 for Give\" add-on to activate."
-msgstr ""
-
 #: includes/filters.php:16
 msgid "PaiementPro - MTN Money"
 msgstr ""
@@ -45,38 +37,6 @@ msgstr ""
 
 #: includes/filters.php:27
 msgid "Orange Money"
-msgstr ""
-
-#: includes/admin/settings.php:51
-msgid "This plugin does not support test mode. So, please process the donations with LIVE mode."
-msgstr ""
-
-#: includes/admin/settings.php:54
-msgid "Merchant ID"
-msgstr ""
-
-#: includes/admin/settings.php:55
-msgid "Please enter the Merchant ID from your PaiementPro account."
-msgstr ""
-
-#: includes/admin/settings.php:60
-msgid "Credential ID"
-msgstr ""
-
-#: includes/admin/settings.php:61
-msgid "Please enter the Credential ID from your PaiementPro account."
-msgstr ""
-
-#: includes/admin/settings.php:66
-msgid "API URL"
-msgstr ""
-
-#: includes/admin/settings.php:67
-msgid "Please enter the API URL from your PaiementPro account."
-msgstr ""
-
-#: includes/admin/settings.php:98
-msgid "Settings"
 msgstr ""
 
 #: includes/payment-methods/class-paiementpro4give-moov-money.php:55, includes/payment-methods/class-paiementpro4give-mtn-money.php:55, includes/payment-methods/class-paiementpro4give-orange-money.php:55

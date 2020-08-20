@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return array
  */
 function paiementpro4give_register_section( $sections ) {
-	$sections['paiementpro'] = __( 'PaiementPro', 'paiementpro4give-for-give' );
+	$sections['paiementpro'] = __( 'PaiementPro', 'give' );
 
 	return $sections;
 }
@@ -44,35 +44,35 @@ function paiementpro4give_register_settings( $settings ) {
 
 	switch ( $current_section ) {
 		case 'paiementpro':
-			$settings = array(
-				array(
+			$settings = [
+				[
 					'type' => 'title',
 					'id'   => 'give_title_gateway_settings_paiementpro',
-					'desc' => esc_html__( 'This plugin does not support test mode. So, please process the donations with LIVE mode.', 'paiementpro-for-give' ),
-				),
-				array(
-					'name' => esc_html__( 'Merchant ID', 'paiementpro-for-give' ),
-					'desc' => esc_html__( 'Please enter the Merchant ID from your PaiementPro account.', 'paiementpro-for-give' ),
+					'desc' => esc_html__( 'This plugin does not support test mode. So, please process the donations with LIVE mode.', 'give' ),
+				],
+				[
+					'name' => esc_html__( 'Merchant ID', 'give' ),
+					'desc' => esc_html__( 'Please enter the Merchant ID from your PaiementPro account.', 'give' ),
 					'id'   => 'paiementpro_live_merchant_id',
 					'type' => 'text',
-				),
-				array(
-					'name' => esc_html__( 'Credential ID', 'paiementpro-for-give' ),
-					'desc' => esc_html__( 'Please enter the Credential ID from your PaiementPro account.', 'paiementpro-for-give' ),
+				],
+				[
+					'name' => esc_html__( 'Credential ID', 'give' ),
+					'desc' => esc_html__( 'Please enter the Credential ID from your PaiementPro account.', 'give' ),
 					'id'   => 'paiementpro_live_credential_id',
 					'type' => 'text',
-				),
-				array(
-					'name' => esc_html__( 'API URL', 'paiementpro-for-give' ),
-					'desc' => esc_html__( 'Please enter the API URL from your PaiementPro account.', 'paiementpro-for-give' ),
+				],
+				[
+					'name' => esc_html__( 'API URL', 'give' ),
+					'desc' => esc_html__( 'Please enter the API URL from your PaiementPro account.', 'give' ),
 					'id'   => 'paiementpro_live_api_url',
 					'type' => 'text',
-				),
-				array(
+				],
+				[
 					'type' => 'sectionend',
 					'id'   => 'give_title_gateway_settings_paiementpro',
-				)
-			);
+				],
+			];
 			break;
 	}
 	return $settings;
@@ -83,24 +83,28 @@ add_filter( 'give_get_settings_gateways', 'paiementpro4give_register_settings' )
 /**
  * This function is used to add settings page link on plugins page.
  *
- * @param array $links List of links on plugin page.
+ * @param array $actions List of links on plugin page.
  *
  * @since  1.0.0
  * @access public
  *
  * @return array
  */
-function paiementpro4give_add_plugin_links( $links ) {
+function paiementpro4give_add_plugin_links( $actions ) {
+	$new_actions = [
+		'settings' => sprintf(
+			'<a href="%1$s">%2$s</a>',
+			admin_url( 'edit.php?post_type=give_forms&page=give-settings&tab=gateways&section=paiementpro' ),
+			esc_html__( 'Settings', 'give' )
+		),
+		'support'  => sprintf(
+			'<a target="_blank" href="%1$s">%2$s</a>',
+			esc_url_raw( 'https://wordpress.org/support/plugin/paiementpro-for-give/' ),
+			esc_html__( 'Support', 'give' )
+		),
+	];
 
-	$links['settings'] = sprintf(
-		'<a href="%1$s">%2$s</a>',
-		esc_url_raw( admin_url( 'edit.php?post_type=give_forms&page=give-settings&tab=gateways&section=paiementpro' ) ),
-		__( 'Settings', 'paiementpro-for-give' )
-	);
-
-	asort( $links );
-
-	return $links;
+	return array_merge( $new_actions, $actions );
 }
 
-add_filter( 'plugin_action_links_' . MGMFG_PLUGIN_BASENAME, 'paiementpro4give_add_plugin_links' );
+add_filter( 'plugin_action_links_' . PAIEMENTPRO4GIVE_PLUGIN_BASENAME, 'paiementpro4give_add_plugin_links' );

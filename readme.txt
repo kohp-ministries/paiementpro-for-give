@@ -2,9 +2,9 @@
 Contributors: paiementpro, mehul0810
 Tags: paiementpro, givewp, give, donation, donations
 Requires at least: 4.8
-Tested up to: 5.4
+Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -59,6 +59,12 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 3. Admin Gateways List Screen
 
 == Changelog ==
+
+= 1.0.1 - 17th August 2020 =
+* Resolve fatal error when on plugin activation when give is not active [#7](https://github.com/kohp-ministries/paiementpro-for-give/issues/7)
+* Display notification to store owner if backend credentials empty [#3](https://github.com/kohp-ministries/paiementpro-for-give/issues/3)
+* UX Improvements
+* Security Improvements
 
 = 1.0.0 - 5th June 2020 =
 * Initial Release.
