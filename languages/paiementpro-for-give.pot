@@ -39,6 +39,14 @@ msgstr ""
 msgid "Orange Money"
 msgstr ""
 
+#: includes/filters.php:31
+msgid "PaiementPro - Credit Card"
+msgstr ""
+
+#: includes/filters.php:32
+msgid "Credit Card"
+msgstr ""
+
 #: includes/payment-methods/class-paiementpro4give-moov-money.php:55, includes/payment-methods/class-paiementpro4give-mtn-money.php:55, includes/payment-methods/class-paiementpro4give-orange-money.php:55
 msgid "Payment Error"
 msgstr ""
