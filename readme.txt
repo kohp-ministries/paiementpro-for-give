@@ -4,7 +4,7 @@ Tags: paiementpro, givewp, give, donation, donations
 Requires at least: 4.8
 Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -24,6 +24,7 @@ This plugin will be used to integrate PaiementPro with GiveWP WordPress donation
 * Accepts one-off donations via Orange Money
 * Accepts one-off donations via MTN Money
 * Accepts one-off donations via Moov Money
+* Accepts one-off donations via Card Payments
 
 == Upgrade Notice ==
 

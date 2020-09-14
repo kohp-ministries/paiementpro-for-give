@@ -27,6 +27,11 @@ function paiementpro4give_register_gateway( $gateways ) {
 		'checkout_label' => esc_html__( 'Orange Money', 'paiementpro-for-give' ),
 	];
 
+	$gateways['paiementpro_card'] = [
+		'admin_label'    => esc_html__( 'PaiementPro - Credit Card', 'paiementpro-for-give' ),
+		'checkout_label' => esc_html__( 'Credit Card', 'paiementpro-for-give' ),
+	];
+
 	return $gateways;
 }
 

@@ -55,5 +55,6 @@ function paiementpro4give_get_supported_payment_methods() {
 		'paiementpro4give_orange_money',
 		'paiementpro4give_mtn_money',
 		'paiementpro4give_moov_money',
+		'paiementpro4give_card',
 	];
 }

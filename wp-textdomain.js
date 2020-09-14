@@ -1,6 +1,6 @@
 const wpTextdomain = require( 'wp-textdomain' );
 
 wpTextdomain( process.argv[ 2 ], {
-	domain: 'give',
+	domain: 'paiementpro-for-give',
 	fix: true,
 } );
