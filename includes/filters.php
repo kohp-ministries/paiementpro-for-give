@@ -13,23 +13,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 function paiementpro4give_register_gateway( $gateways ) {
 
 	$gateways['paiementpro_mtn_money'] = [
-		'admin_label'    => esc_html__( 'PaiementPro - MTN Money', 'give' ),
-		'checkout_label' => esc_html__( 'MTN Money', 'give' ),
+		'admin_label'    => esc_html__( 'PaiementPro - MTN Money', 'paiementpro-for-give' ),
+		'checkout_label' => esc_html__( 'MTN Money', 'paiementpro-for-give' ),
 	];
 
 	$gateways['paiementpro_moov_money'] = [
-		'admin_label'    => esc_html__( 'PaiementPro - Moov Money', 'give' ),
-		'checkout_label' => esc_html__( 'Moov Money', 'give' ),
+		'admin_label'    => esc_html__( 'PaiementPro - Moov Money', 'paiementpro-for-give' ),
+		'checkout_label' => esc_html__( 'Moov Money', 'paiementpro-for-give' ),
 	];
 
 	$gateways['paiementpro_orange_money'] = [
-		'admin_label'    => esc_html__( 'PaiementPro - Orange Money', 'give' ),
-		'checkout_label' => esc_html__( 'Orange Money', 'give' ),
+		'admin_label'    => esc_html__( 'PaiementPro - Orange Money', 'paiementpro-for-give' ),
+		'checkout_label' => esc_html__( 'Orange Money', 'paiementpro-for-give' ),
 	];
 
 	$gateways['paiementpro_card'] = [
-		'admin_label'    => esc_html__( 'PaiementPro - Credit Card', 'give' ),
-		'checkout_label' => esc_html__( 'Credit Card', 'give' ),
+		'admin_label'    => esc_html__( 'PaiementPro - Credit Card', 'paiementpro-for-give' ),
+		'checkout_label' => esc_html__( 'Credit Card', 'paiementpro-for-give' ),
 	];
 
 	return $gateways;
