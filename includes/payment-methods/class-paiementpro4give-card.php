@@ -2,7 +2,7 @@
 /**
  * PaiementPro for Give | Credit Card
  *
- * @since 1.0.0
+ * @since 1.0.2
  */
 
 // Bailout, if accessed directly.
@@ -11,11 +11,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class PaiementPro4Give_Card {
+
+	/**
+	 * Constructor
+	 *
+	 * @since  1.0.2
+	 * @access public
+	 *
+	 * @return void
+	 */
 	public function __construct() {
 		add_action( 'give_gateway_paiementpro_card', [ $this, 'process_donation' ] );
 		add_action( 'give_paiementpro_card_cc_form', '__return_false' );
 	}
 
+	/**
+	 * Process Donation
+	 *
+	 * @param array $data List of posted data.
+	 *
+	 * @since  1.0.2
+	 * @access public
+	 *
+	 * @return void
+	 */
 	public function process_donation( $data ) {
 		// Check for any stored errors.
 		$errors = give_get_errors();
@@ -52,10 +71,10 @@ class PaiementPro4Give_Card {
 
 				// Record the error.
 				give_record_gateway_error(
-					__( 'Payment Error', 'paiementpro-for-give' ),
+					__( 'Payment Error', 'give' ),
 					sprintf(
 					/* translators: %s: payment data */
-						__( 'Payment creation failed before processing payment via PaiementPro. Payment data: %s', 'paiementpro-for-give' ),
+						__( 'Payment creation failed before processing payment via PaiementPro. Payment data: %s', 'give' ),
 						wp_json_encode( $data )
 					),
 					$donation_id

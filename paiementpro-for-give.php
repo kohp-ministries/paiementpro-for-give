@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       PaiementPro for Give
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            PaiementPro
  * Author URI:        https://paiementpro.net
  * Plugin URI:        https://wordpress.org/plugins/paiementpro-for-give/
@@ -93,7 +93,7 @@ if ( ! class_exists( 'PaiementPro4Give' ) ) {
 		 */
 		public function setup_constants() {
 			if ( ! defined( 'PAIEMENTPRO4GIVE_VERSION' ) ) {
-				define( 'PAIEMENTPRO4GIVE_VERSION', '1.0.1' );
+				define( 'PAIEMENTPRO4GIVE_VERSION', '1.0.2' );
 			}
 
 			if ( ! defined( 'PAIEMENTPRO4GIVE_MIN_GIVE_VER' ) ) {
