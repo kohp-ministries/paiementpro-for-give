@@ -79,7 +79,7 @@ class PaiementPro4Give_Orange_Money {
 					'merchantId'      => $merchant_id,
 					'currency'        => 952,
 					'amount'          => $data['price'],
-					'channel'         => 'OM',
+					'channel'         => 'OMCIV2',
 					'customer_id'     => '',
 					'description'     => 'Hello',
 					'email'           => $email,
