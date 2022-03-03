@@ -79,7 +79,7 @@ class PaiementPro4Give_MTN_Money {
 					'merchantId'      => $merchant_id,
 					'currency'        => 952,
 					'amount'          => $data['price'],
-					'channel'         => 'MOMO',
+					'channel'         => 'MOMOCI',
 					'customer_id'     => '',
 					'description'     => 'Hello',
 					'email'           => $email,
