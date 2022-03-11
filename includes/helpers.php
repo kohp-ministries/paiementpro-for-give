@@ -52,9 +52,13 @@ function paiementpro4give_get_api_url() {
  */
 function paiementpro4give_get_supported_payment_methods() {
 	return [
-		'paiementpro4give_orange_money',
-		'paiementpro4give_mtn_money',
-		'paiementpro4give_moov_money',
+		'paiementpro4give_orange_money_bf',
+		'paiementpro4give_orange_money_ci',
+		'paiementpro4give_orange_money_ml',
+		'paiementpro4give_mtn_money_ci',
+		'paiementpro4give_mtn_money_bj',
+		'paiementpro4give_moov_money_ci',
+		'paiementpro4give_moov_money_bj',
 		'paiementpro4give_card',
 	];
 }
