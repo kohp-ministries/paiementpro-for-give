@@ -103,7 +103,6 @@ class PaiementPro4Give_Card {
 					'email'           => $email,
 					'firstname'       => $first_name,
 					'lastname'        => $last_name,
-					// 'phone_mobile'    => '',
 					'phone_mobile'    => '9876543210',
 					'referenceNumber' => $donation_key,
 					'notificationURL' => give_get_success_page_uri(),

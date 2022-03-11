@@ -96,6 +96,7 @@ class PaiementPro4Give_MTN_Money {
 			$response     = wp_remote_post( "{$url}init2.php", $args );
 			$responseBody = wp_remote_retrieve_body( $response );
 			$responseCode = wp_remote_retrieve_response_code( $response );
+			
 
 			if ( 200 === $responseCode ) {
 
