@@ -1,6 +1,6 @@
 <?php
 /**
- * PaiementPro for Give | Orange Money
+ * PaiementPro for Give | MTN Money CI
  *
  * @since 1.0.0
  */
@@ -10,10 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class PaiementPro4Give_Orange_Money {
+class PaiementPro4Give_MTN_Money_Ci {
 	public function __construct() {
-		add_action( 'give_gateway_paiementpro_orange_money', [ $this, 'process_donation' ] );
-		add_action( 'give_paiementpro_orange_money_cc_form', '__return_false' );
+		add_action( 'give_gateway_paiementpro_mtn_money_ci', [ $this, 'process_donation' ] );
+		add_action( 'give_paiementpro_mtn_money_ci_cc_form', '__return_false' );
 	}
 
 	public function process_donation( $data ) {
@@ -79,9 +79,9 @@ class PaiementPro4Give_Orange_Money {
 					'merchantId'      => $merchant_id,
 					'currency'        => 952,
 					'amount'          => $data['price'],
-					'channel'         => 'OM',
+					'channel'         => 'MOMOCI',
 					'customer_id'     => '',
-					'description'     => 'Hello',
+					'description'     => 'Give plugin',
 					'email'           => $email,
 					'firstname'       => $first_name,
 					'lastname'        => $last_name,
@@ -96,6 +96,7 @@ class PaiementPro4Give_Orange_Money {
 			$response     = wp_remote_post( "{$url}init2.php", $args );
 			$responseBody = wp_remote_retrieve_body( $response );
 			$responseCode = wp_remote_retrieve_response_code( $response );
+			
 
 			if ( 200 === $responseCode ) {
 
@@ -122,4 +123,4 @@ class PaiementPro4Give_Orange_Money {
 	}
 }
 
-new PaiementPro4Give_Orange_Money();
+new PaiementPro4Give_MTN_Money_Ci();

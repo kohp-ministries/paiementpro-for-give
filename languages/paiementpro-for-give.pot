@@ -16,44 +16,48 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: includes/filters.php:16
-msgid "PaiementPro - MTN Money"
-msgstr ""
-
-#: includes/filters.php:17
-msgid "MTN Money"
+msgid "MTN Money Côte d'ivoire"
 msgstr ""
 
 #: includes/filters.php:21
-msgid "PaiementPro - Moov Money"
-msgstr ""
-
-#: includes/filters.php:22
-msgid "Moov Money"
+msgid "PaiementPro - MTN Money Bénin"
 msgstr ""
 
 #: includes/filters.php:26
-msgid "PaiementPro - Orange Money"
-msgstr ""
-
-#: includes/filters.php:27
-msgid "Orange Money"
+msgid "PaiementPro - Moov Money Côte d'ivoire"
 msgstr ""
 
 #: includes/filters.php:31
+msgid "PaiementPro - Moov Money Bénin"
+msgstr ""
+
+#: includes/filters.php:36
+msgid "PaiementPro - Orange Money Burkina faso"
+msgstr ""
+
+#: includes/filters.php:41
+msgid "PaiementPro - Orange Money Côte d'ivoire"
+msgstr ""
+
+#: includes/filters.php:46
+msgid "PaiementPro - Orange Money Mali"
+msgstr ""
+
+#: includes/filters.php:51
 msgid "PaiementPro - Credit Card"
 msgstr ""
 
-#: includes/filters.php:32
+#: includes/filters.php:52
 msgid "Credit Card"
 msgstr ""
 
-#: includes/payment-methods/class-paiementpro4give-moov-money.php:55, includes/payment-methods/class-paiementpro4give-mtn-money.php:55, includes/payment-methods/class-paiementpro4give-orange-money.php:55
+#: includes/payment-methods/class-paiementpro4give-mtn-money-ci.php:55, includes/payment-methods/class-paiementpro4give-mtn-money-bj.php:55, includes/payment-methods/class-paiementpro4give-moov-money-ci.php:55, includes/payment-methods/class-paiementpro4give-moov-money-bj.php55, includes/payment-methods/class-paiementpro4give-orange-money-ci.php:55, includes/payment-methods/class-paiementpro4give-orange-money-bf.php:55, includes/payment-methods/class-paiementpro4give-orange-money-ml.php:55, includes/payment-methods/class-paiementpro4give-card.php:55
 msgid "Payment Error"
 msgstr ""
 
 #. translators: %s: payment data
 #. translators: %s: payment data
 #. translators: %s: payment data
-#: includes/payment-methods/class-paiementpro4give-moov-money.php:58, includes/payment-methods/class-paiementpro4give-mtn-money.php:58, includes/payment-methods/class-paiementpro4give-orange-money.php:58
+#: includes/payment-methods/class-paiementpro4give-mtn-money-ci.php:58, includes/payment-methods/class-paiementpro4give-mtn-money-bj.php:58, includes/payment-methods/class-paiementpro4give-moov-money-ci.php:58, includes/payment-methods/class-paiementpro4give-moov-money-bj.php58, includes/payment-methods/class-paiementpro4give-orange-money-ci.php:58, includes/payment-methods/class-paiementpro4give-orange-money-bf.php:58, includes/payment-methods/class-paiementpro4give-orange-money-ml.php:58, includes/payment-methods/class-paiementpro4give-card.php:58
 msgid "Payment creation failed before processing payment via PaiementPro. Payment data: %s"
 msgstr ""

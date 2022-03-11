@@ -1,6 +1,6 @@
 <?php
 /**
- * PaiementPro for Give | Orange Money
+ * PaiementPro for Give | Orange Money ML
  *
  * @since 1.0.0
  */
@@ -10,10 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class PaiementPro4Give_Orange_Money {
+class PaiementPro4Give_Orange_Money_Ml {
 	public function __construct() {
-		add_action( 'give_gateway_paiementpro_orange_money', [ $this, 'process_donation' ] );
-		add_action( 'give_paiementpro_orange_money_cc_form', '__return_false' );
+		add_action( 'give_gateway_paiementpro_orange_money_ml', [ $this, 'process_donation' ] );
+		add_action( 'give_paiementpro_orange_money_ml_cc_form', '__return_false' );
 	}
 
 	public function process_donation( $data ) {
@@ -79,9 +79,9 @@ class PaiementPro4Give_Orange_Money {
 					'merchantId'      => $merchant_id,
 					'currency'        => 952,
 					'amount'          => $data['price'],
-					'channel'         => 'OM',
+					'channel'         => 'OMML',
 					'customer_id'     => '',
-					'description'     => 'Hello',
+					'description'     => 'Give plugin',
 					'email'           => $email,
 					'firstname'       => $first_name,
 					'lastname'        => $last_name,
@@ -122,4 +122,4 @@ class PaiementPro4Give_Orange_Money {
 	}
 }
 
-new PaiementPro4Give_Orange_Money();
+new PaiementPro4Give_Orange_Money_Ml();

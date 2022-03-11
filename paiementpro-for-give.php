@@ -167,9 +167,13 @@ if ( ! class_exists( 'PaiementPro4Give' ) ) {
 
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/helpers.php';
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/admin/settings.php';
-			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-mtn-money.php';
-			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-moov-money.php';
-			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-orange-money.php';
+			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-mtn-money-ci.php';
+			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-mtn-money-bj.php';
+			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-moov-money-ci.php';
+			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-moov-money-bj.php';
+			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-orange-money-ci.php';
+			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-orange-money-bf.php';
+			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-orange-money-ml.php';
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/payment-methods/class-paiementpro4give-card.php';
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/filters.php';
 			require_once PAIEMENTPRO4GIVE_PLUGIN_DIR . 'includes/actions.php';
